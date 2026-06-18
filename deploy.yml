@@ -12,6 +12,6 @@
 
     - name: Copy JAR file
       ansible.builtin.copy:
-        src: /mnt/c/Users/Dimple CR/.jenkins/workspace/Mavenhello/target/MavenExperiment8-1.0-SNAPSHOT.jar
-        dest: /home/admin_user/deployment/HelloMaven.jar
+        src: /mnt/c/Users/Dimple\ CR/.jenkins/workspace/Mavenhello/target/MavenExperiment8-1.0-SNAPSHOT.jar
+        dest: /home/admin_user/deployment/MavenExperiment8.jar
         remote_src: yes
