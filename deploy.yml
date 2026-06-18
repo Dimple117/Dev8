@@ -1,0 +1,17 @@
+---
+- name: Deploy Maven Artifact
+  hosts: localhost
+  become: yes
+
+  tasks:
+    - name: Create deployment folder
+      ansible.builtin.file:
+        path: /home/admin_user/deployment
+        state: directory
+        mode: '0755'
+
+    - name: Copy JAR file
+      ansible.builtin.copy:
+        src: /mnt/c/Users/Dimple CR/.jenkins/workspace/Mavenhello/target/MavenExperiment8-1.0-SNAPSHOT.jar
+        dest: /home/admin_user/deployment/HelloMaven.jar
+        remote_src: yes
